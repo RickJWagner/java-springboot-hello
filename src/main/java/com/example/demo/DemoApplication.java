@@ -35,7 +35,7 @@ public class DemoApplication {
       String stringNow = simpleDateFormat.format(new Date());
 
       System.out.println("hello: " + cnt);
-      return "4 Jambo Spring " + cnt++ + " " + stringNow + " on " + HOSTNAME;
+      return "5 Hola Spring " + cnt++ + " " + stringNow + " on " + HOSTNAME;
     }
 
     public static void main(String[] args) {
