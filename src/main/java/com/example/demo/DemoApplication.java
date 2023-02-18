@@ -19,6 +19,9 @@ public class DemoApplication {
     private static final String HOSTNAME = 
         System.getenv().getOrDefault("HOSTNAME", "unknown");
 
+    private static final String GREETING =
+        System.getenv().getOrDefault("GREETING", "Hi");
+
     
     @RequestMapping("/")
     String home() {
@@ -34,8 +37,8 @@ public class DemoApplication {
       simpleDateFormat = new SimpleDateFormat(pattern);
       String stringNow = simpleDateFormat.format(new Date());
 
-      System.out.println("hello: " + cnt);
-      return "12.4 Burr Spring " + cnt++ + " " + stringNow + " on " + HOSTNAME;
+      System.out.println(GREETING + ": " + cnt);
+      return GREETING + ": " + cnt++ + " " + stringNow + " on " + HOSTNAME;
     }
 
     public static void main(String[] args) {
